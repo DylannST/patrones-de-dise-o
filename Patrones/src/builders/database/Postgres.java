@@ -23,6 +23,7 @@ public class Postgres implements Database {
         }
     }
 
+    @Override
     public void createTable(Connection con) {
         try {
             ps = con.prepareStatement("create table IF NOT EXISTS empleado (\n" +

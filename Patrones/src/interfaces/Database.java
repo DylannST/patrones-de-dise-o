@@ -9,5 +9,5 @@ public interface Database {
 
     Empleado registrar(Connection con, Empleado empleado);
 
-     void createTable(Connection con);
+    void createTable(Connection con);
 }
