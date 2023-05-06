@@ -3,8 +3,8 @@ package entity;
 import java.util.Arrays;
 
 public class Empleado {
-    String nombre;
-    String cedula;
+    protected String nombre;
+    protected String cedula;
 
     String[] funciones;
 

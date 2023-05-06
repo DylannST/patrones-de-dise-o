@@ -1,4 +1,4 @@
-import Interface.Profesion;
+import interfaces.Profesional;
 import entity.Empleado;
 import service.ProfesionalService;
 
@@ -31,7 +31,7 @@ public class Crear extends JFrame {
                 service.enLaBaseDatos((String) tipoBD.getSelectedItem());
                 Empleado empleado = service.crearProfesional(txtCedula.getText(), txtNombre.getText(), (String) options.getSelectedItem());
                 resultado.setText("Se registró el empleado exitosamente\n\n");
-                resultado.setText(resultado.getText() + ((Profesion) empleado).datosEmpleado());
+                resultado.setText(resultado.getText() + ((Profesional) empleado).datosDelProfesional());
             }
         });
     }

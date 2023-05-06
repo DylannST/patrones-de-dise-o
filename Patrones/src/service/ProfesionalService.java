@@ -1,9 +1,8 @@
 package service;
 
-import Interface.Database;
-import Interface.Profesion;
+import interfaces.Profesional;
 import entity.Empleado;
-import entity.ProfesionalFactory;
+import factory.profesional.ProfesionalFactory;
 import repository.ProfesionalRepository;
 
 public class ProfesionalService {
@@ -15,7 +14,7 @@ public class ProfesionalService {
     }
 
     public Empleado crearProfesional(String cedula, String nombre, String type) {
-        Profesion empleado = ProfesionalFactory.createProfesional(cedula, nombre, type);
+        Profesional empleado = ProfesionalFactory.createProfesional(cedula, nombre, type);
         return repo.createProfesional((Empleado) empleado);
     }
 
