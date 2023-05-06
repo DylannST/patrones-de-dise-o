@@ -11,9 +11,9 @@ public class MySql implements Database {
     @Override
     public Connection getConnection() {
         try {
-            String hostname = "containers-us-west-173.railway.app";
-            String port = "7929";
-            String pass = "GKfuw3IMorPmQ9kGj1iZ";
+            String hostname = "containers-us-west-67.railway.app";
+            String port = "7922";
+            String pass = "abUQUlPkL5H7PmZeNol3";
             return DriverManager.getConnection("jdbc:mysql://"+ hostname+":"+port+"/railway", "root", pass);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -24,11 +24,14 @@ public class MySql implements Database {
     public Empleado registrar(Connection con, Empleado empleado) {
         createTable(con);
         try {
+            System.out.println();
             ps = con.prepareStatement("INSERT INTO empleado (id, nombre, typeFunction)\n" +
                     "VALUES (?, ?, ?)");
             ps.setString(1, empleado.getCedula());
             ps.setString(2, empleado.getNombre());
             ps.setString(3, empleado.funciones());
+            ps.execute();
+            System.out.println("Query ejecutado exitosamente");
             return empleado;
         } catch (Exception e) {
             throw new RuntimeException(e);

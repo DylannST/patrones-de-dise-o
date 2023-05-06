@@ -13,9 +13,9 @@ public class Postgres implements Database {
     @Override
     public Connection getConnection() {
         try {
-            String hostname = "containers-us-west-101.railway.app";
-            String port = "7045";
-            String pass = "JruKpPuG7lVtHroJ6t4t";
+            String hostname = "containers-us-west-50.railway.app";
+            String port = "6984";
+            String pass = "xUfNCBjqHd1sdtUvJ3VZ";
             return DriverManager.getConnection("jdbc:postgresql://"+hostname+":"+port+"/railway", "postgres", pass);
 
         } catch (Exception e) {
@@ -45,6 +45,8 @@ public class Postgres implements Database {
             ps.setString(1, empleado.getCedula());
             ps.setString(2, empleado.getNombre());
             ps.setString(3, empleado.funciones());
+            ps.execute();
+            System.out.println("Query ejecutado exitosamente");
             return empleado;
         } catch (Exception e) {
             throw new RuntimeException(e);
