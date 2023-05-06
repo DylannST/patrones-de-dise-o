@@ -1,5 +1,5 @@
 import interfaces.Profesional;
-import entity.Empleado;
+import entity.employee.Empleado;
 import service.ProfesionalService;
 
 import javax.swing.*;

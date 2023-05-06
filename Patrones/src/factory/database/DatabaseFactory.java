@@ -1,7 +1,7 @@
 package factory.database;
 
-import builders.database.MySql;
-import builders.database.Postgres;
+import entity.database.MySql;
+import entity.database.Postgres;
 import interfaces.Database;
 
 public class DatabaseFactory {

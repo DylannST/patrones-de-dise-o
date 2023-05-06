@@ -1,6 +1,5 @@
-package builders.employee;
+package entity.employee;
 
-import entity.Empleado;
 import interfaces.Profesional;
 
 import java.util.Arrays;

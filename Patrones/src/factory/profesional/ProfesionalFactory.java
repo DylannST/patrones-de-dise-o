@@ -1,8 +1,8 @@
 package factory.profesional;
 
-import builders.employee.Asesor;
-import builders.employee.Desarrollador;
-import builders.employee.RecursosHumanos;
+import entity.employee.Asesor;
+import entity.employee.Desarrollador;
+import entity.employee.RecursosHumanos;
 import interfaces.Profesional;
 
 public class ProfesionalFactory {

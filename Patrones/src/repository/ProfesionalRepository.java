@@ -2,7 +2,7 @@ package repository;
 
 import interfaces.Database;
 import factory.database.DatabaseFactory;
-import entity.Empleado;
+import entity.employee.Empleado;
 
 import java.sql.Connection;
 

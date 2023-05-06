@@ -1,7 +1,7 @@
 package service;
 
 import interfaces.Profesional;
-import entity.Empleado;
+import entity.employee.Empleado;
 import factory.profesional.ProfesionalFactory;
 import repository.ProfesionalRepository;
 

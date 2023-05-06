@@ -1,6 +1,6 @@
 package interfaces;
 
-import entity.Empleado;
+import entity.employee.Empleado;
 
 import java.sql.Connection;
 

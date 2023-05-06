@@ -1,4 +1,4 @@
-package entity;
+package entity.employee;
 
 import java.util.Arrays;
 

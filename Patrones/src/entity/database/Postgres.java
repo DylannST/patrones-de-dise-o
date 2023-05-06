@@ -1,7 +1,7 @@
-package builders.database;
+package entity.database;
 
 import interfaces.Database;
-import entity.Empleado;
+import entity.employee.Empleado;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
