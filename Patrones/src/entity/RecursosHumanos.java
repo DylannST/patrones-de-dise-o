@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class RecursosHumanos  extends Empleado implements Profesion {
 
-    private String[] funciones = new String[]{"Reclutamiento\n", "Administración de personal\n", "Evaluación de desempeño"};
+    private String[] funciones = new String[]{"Reclutamiento", "\n        Administración de personal", "\n        " +
+            "Evaluación de desempeño"};
 
     public RecursosHumanos(String nombre, String cedula) {
         super(nombre, cedula);

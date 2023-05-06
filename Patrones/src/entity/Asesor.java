@@ -5,7 +5,7 @@ import Interface.Profesion;
 import java.util.Arrays;
 
 public class Asesor extends Empleado implements Profesion {
-    private String[] funciones = new String[]{"Orientación bancaria", "\nManejo de persona", "\nManejo de caja", "\nContaduria"};
+    private String[] funciones = new String[]{"Orientación bancaria", "\n        Manejo de persona", "\n        Manejo de caja", "\n        Contaduria"};
 
     public Asesor(String nombre, String cedula) {
         super(nombre, cedula);

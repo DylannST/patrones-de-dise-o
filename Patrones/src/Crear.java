@@ -21,6 +21,7 @@ public class Crear extends JFrame {
         options.addItem("Asesor");
         options.addItem("Recursos Humanos");
 
+        tipoBD.addItem("Seleccione la base de datos");
         tipoBD.addItem("MySQL");
         tipoBD.addItem("PostgresSQL");
         ProfesionalService service = new ProfesionalService();

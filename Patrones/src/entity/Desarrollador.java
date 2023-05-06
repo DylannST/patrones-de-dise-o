@@ -5,7 +5,9 @@ import Interface.Profesion;
 import java.util.Arrays;
 
 public class Desarrollador extends Empleado implements Profesion {
-    private String[] funciones = new String[]{"Desarrollo de software", "\nSoporte", "\nManejo de Infraestructura AWS", "\nManejo de Infraestructura de AzureDevops"};
+    private String[] funciones = new String[]{"Desarrollo de software", "\n        " +
+            "Soporte", "\n        Manejo de Infraestructura AWS", "\n        " +
+            "Manejo de Infraestructura de AzureDevops"};
 
     public Desarrollador(String nombre, String cedula) {
         super(nombre, cedula);
