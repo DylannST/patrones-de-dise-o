@@ -24,7 +24,6 @@ public class MySql implements Database {
     public Empleado registrar(Connection con, Empleado empleado) {
         createTable(con);
         try {
-            System.out.println();
             ps = con.prepareStatement("INSERT INTO empleado (id, nombre, typeFunction)\n" +
                     "VALUES (?, ?, ?)");
             ps.setString(1, empleado.getCedula());
