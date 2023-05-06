@@ -30,7 +30,7 @@ public class MySql implements Database {
                     "VALUES (?, ?, ?)");
             ps.setString(1, empleado.getCedula());
             ps.setString(2, empleado.getNombre());
-            ps.setString(3, empleado.getFunciones());
+            ps.setString(3, empleado.funciones());
             if (ps.executeUpdate() > 0) {
                 System.out.print("Exitoso");
             }

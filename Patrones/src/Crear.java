@@ -13,12 +13,13 @@ public class Crear extends JFrame {
     private JComboBox options;
     private JTextField txtCedula;
     private JComboBox tipoBD;
-    private JTextPane resultado;
+    private JTextArea resultado;
 
     public Crear() {
         options.addItem("Seleccionar");
-        options.addItem("desarrollador");
-        options.addItem("asesor");
+        options.addItem("Desarrollador");
+        options.addItem("Asesor");
+        options.addItem("Recursos Humanos");
 
         tipoBD.addItem("MySQL");
         tipoBD.addItem("PostgresSQL");
@@ -28,7 +29,8 @@ public class Crear extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 service.enLaBaseDatos((String) tipoBD.getSelectedItem());
                 Empleado empleado = service.crearProfesional(txtCedula.getText(), txtNombre.getText(), (String) options.getSelectedItem());
-                resultado.setText(((Profesion) empleado).datosEmpleado());
+                resultado.setText("Se registró el empleado exitosamente\n\n");
+                resultado.setText(resultado.getText() + ((Profesion) empleado).datosEmpleado());
             }
         });
     }

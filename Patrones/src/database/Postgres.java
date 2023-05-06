@@ -45,10 +45,7 @@ public class Postgres implements Database {
             ps = con.prepareStatement("INSERT INTO empleado(id, nombre, typefunction) VALUES (?, ?, ?)");
             ps.setString(1, empleado.getCedula());
             ps.setString(2, empleado.getNombre());
-            ps.setString(3, empleado.getFunciones());
-            if (ps.executeUpdate() > 0) {
-                System.out.printf("Exitoso");
-            }
+            ps.setString(3, empleado.funciones());
             return empleado;
         } catch (Exception e) {
             throw new RuntimeException(e);

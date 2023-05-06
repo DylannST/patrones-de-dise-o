@@ -32,7 +32,7 @@ public class Empleado {
 
 
 
-    public String getFunciones() {
+    public String funciones() {
         return Arrays.toString(this.funciones);
     }
 }

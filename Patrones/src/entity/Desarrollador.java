@@ -5,7 +5,7 @@ import Interface.Profesion;
 import java.util.Arrays;
 
 public class Desarrollador extends Empleado implements Profesion {
-    private String[] funciones = new String[]{"Desarrollo de software", "Soporte", "Manejo de Infraestructura AWS", "Manejo de Infraestructura de AzureDevops"};
+    private String[] funciones = new String[]{"Desarrollo de software", "\nSoporte", "\nManejo de Infraestructura AWS", "\nManejo de Infraestructura de AzureDevops"};
 
     public Desarrollador(String nombre, String cedula) {
         super(nombre, cedula);
@@ -13,20 +13,13 @@ public class Desarrollador extends Empleado implements Profesion {
 
     @Override
     public String funciones() {
-        return Arrays.toString(funciones);
+        return Arrays.toString(this.funciones);
     }
-
-
-
 
     @Override
     public String datosEmpleado() {
         return "Desarrollador{\n    nombre = "+ nombre + "\n    cédula = " + cedula + "\n" +
-                "    funciones = " + Arrays.toString(funciones) +"\n}";
+                "    funciones=\n        " + Arrays.toString(this.funciones) +"\n}";
     }
 
-    @Override
-    public String getFunciones() {
-        return Arrays.toString(this.funciones);
-    }
 }
