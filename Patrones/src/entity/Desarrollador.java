@@ -21,11 +21,8 @@ public class Desarrollador extends Empleado implements Profesion {
 
     @Override
     public String datosEmpleado() {
-        return "Desarrollador{" +
-                "nombre='" + nombre + '\'' +
-                ", cedula='" + cedula + '\'' +
-                ", funciones=" + Arrays.toString(funciones) +
-                '}';
+        return "Desarrollador{\n    nombre = "+ nombre + "\n    cédula = " + cedula + "\n" +
+                "    funciones = " + Arrays.toString(funciones) +"\n}";
     }
 
     @Override

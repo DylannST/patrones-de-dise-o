@@ -13,7 +13,10 @@ public class MySql implements Database {
     @Override
     public Connection getConnection() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://containers-us-west-52.railway.app:6124/railway", "root", "HM0hj6qjoPry27FVGiDL");
+            String hostname = "containers-us-west-130.railway.app";
+            String port = "7191";
+            String pass = "wxILYojoKoWG8w4aSApK";
+            return DriverManager.getConnection("jdbc:mysql://"+ hostname+":"+port+"/railway", "root", pass);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

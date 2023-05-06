@@ -12,21 +12,23 @@ public class Crear extends JFrame {
     private JTextField txtNombre;
     private JComboBox options;
     private JTextField txtCedula;
-    private JTextField txtConsultar;
-    private JLabel lbInfo;
-    private JButton consultarButton;
+    private JComboBox tipoBD;
+    private JTextPane resultado;
 
     public Crear() {
         options.addItem("Seleccionar");
         options.addItem("desarrollador");
         options.addItem("asesor");
+
+        tipoBD.addItem("MySQL");
+        tipoBD.addItem("PostgresSQL");
         ProfesionalService service = new ProfesionalService();
         btnRegistrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                service.enLaBaseDatos((String) tipoBD.getSelectedItem());
                 Empleado empleado = service.crearProfesional(txtCedula.getText(), txtNombre.getText(), (String) options.getSelectedItem());
-                lbInfo.setText(((Profesion) empleado).datosEmpleado());
-
+                resultado.setText(((Profesion) empleado).datosEmpleado());
             }
         });
     }
@@ -36,6 +38,7 @@ public class Crear extends JFrame {
         crear.setContentPane(new Crear().panel);
         crear.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         crear.setVisible(true);
+        crear.setLocationRelativeTo(null);
         crear.pack();
     }
 

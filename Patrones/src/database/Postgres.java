@@ -15,7 +15,10 @@ public class Postgres implements Database {
     @Override
     public Connection getConnection() {
         try {
-            return DriverManager.getConnection("jdbc:postgresql://containers-us-west-20.railway.app:5777/railway", "postgres", "nUDw1y209U5QQDAs9t2i");
+            String hostname = "containers-us-west-56.railway.app";
+            String port = "7996";
+            String pass = "ubiNOQGKe5TMttFKWhOi";
+            return DriverManager.getConnection("jdbc:postgresql://"+hostname+":"+port+"/railway", "postgres", pass);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
