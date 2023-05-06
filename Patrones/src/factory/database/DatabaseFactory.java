@@ -1,6 +1,8 @@
-package database;
+package factory.database;
 
-import Interface.Database;
+import builders.database.MySql;
+import builders.database.Postgres;
+import interfaces.Database;
 
 public class DatabaseFactory {
     public static Database getDatabase(String type) {

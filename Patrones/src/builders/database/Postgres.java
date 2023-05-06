@@ -1,13 +1,11 @@
-package database;
+package builders.database;
 
-import Interface.Database;
-import Interface.Profesion;
+import interfaces.Database;
 import entity.Empleado;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.util.Arrays;
 
 public class Postgres implements Database {
     PreparedStatement ps;
@@ -15,9 +13,9 @@ public class Postgres implements Database {
     @Override
     public Connection getConnection() {
         try {
-            String hostname = "containers-us-west-56.railway.app";
-            String port = "7996";
-            String pass = "ubiNOQGKe5TMttFKWhOi";
+            String hostname = "containers-us-west-101.railway.app";
+            String port = "7045";
+            String pass = "JruKpPuG7lVtHroJ6t4t";
             return DriverManager.getConnection("jdbc:postgresql://"+hostname+":"+port+"/railway", "postgres", pass);
 
         } catch (Exception e) {

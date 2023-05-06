@@ -1,10 +1,11 @@
-package entity;
+package builders.employee;
 
-import Interface.Profesion;
+import entity.Empleado;
+import interfaces.Profesional;
 
 import java.util.Arrays;
 
-public class Asesor extends Empleado implements Profesion {
+public class Asesor extends Empleado implements Profesional {
     private String[] funciones = new String[]{"Orientación bancaria", "\n        Manejo de persona", "\n        Manejo de caja", "\n        Contaduria"};
 
     public Asesor(String nombre, String cedula) {
@@ -17,7 +18,7 @@ public class Asesor extends Empleado implements Profesion {
     }
 
     @Override
-    public String datosEmpleado() {
+    public String datosDelProfesional() {
         return "Asesor{\n    nombre = "+ nombre + "\n    cédula = " + cedula + "\n" +
                 "    funciones =\n        " + Arrays.toString(this.funciones) +"\n}";
     }

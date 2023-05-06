@@ -1,11 +1,9 @@
-package database;
+package builders.database;
 
-import Interface.Database;
-import Interface.Profesion;
+import interfaces.Database;
 import entity.Empleado;
 
 import java.sql.*;
-import java.util.Arrays;
 
 public class MySql implements Database {
     PreparedStatement ps;
@@ -13,9 +11,9 @@ public class MySql implements Database {
     @Override
     public Connection getConnection() {
         try {
-            String hostname = "containers-us-west-130.railway.app";
-            String port = "7191";
-            String pass = "wxILYojoKoWG8w4aSApK";
+            String hostname = "containers-us-west-173.railway.app";
+            String port = "7929";
+            String pass = "GKfuw3IMorPmQ9kGj1iZ";
             return DriverManager.getConnection("jdbc:mysql://"+ hostname+":"+port+"/railway", "root", pass);
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -31,9 +29,6 @@ public class MySql implements Database {
             ps.setString(1, empleado.getCedula());
             ps.setString(2, empleado.getNombre());
             ps.setString(3, empleado.funciones());
-            if (ps.executeUpdate() > 0) {
-                System.out.print("Exitoso");
-            }
             return empleado;
         } catch (Exception e) {
             throw new RuntimeException(e);
