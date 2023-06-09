@@ -24,6 +24,7 @@ public class Crear extends JFrame {
         tipoBD.addItem("Seleccione la base de datos");
         tipoBD.addItem("MySQL");
         tipoBD.addItem("PostgresSQL");
+
         ProfesionalService service = new ProfesionalService();
         btnRegistrar.addActionListener(new ActionListener() {
             @Override

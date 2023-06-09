@@ -11,9 +11,9 @@ public class MySql implements Database {
     @Override
     public Connection getConnection() {
         try {
-            String hostname = "containers-us-west-67.railway.app";
-            String port = "7922";
-            String pass = "abUQUlPkL5H7PmZeNol3";
+            String hostname = "containers-us-west-206.railway.app";
+            String port = "7418";
+            String pass = "mCn3K9a32VRrcDSaOB65";
             return DriverManager.getConnection("jdbc:mysql://"+ hostname+":"+port+"/railway", "root", pass);
         } catch (Exception e) {
             throw new RuntimeException(e);
